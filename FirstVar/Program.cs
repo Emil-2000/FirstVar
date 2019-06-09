@@ -35,12 +35,13 @@ namespace FirstVar
                 Console.WriteLine("Ошибка чтения файла!!! " + ex.Message);
                 throw new Exception("Ошибка чтения файла!!");
             }
-            int[] Ret = new int[arrText.Count];
-            for (int i = 0; i < arrText.Count; i++)
+            String[] words = arrText[0].ToString().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            int[] Ret = new int[words.Length];
+            for (int i = 0; i < words.Length; i++)
             {
                 try
                 {
-                    Ret[i] = Convert.ToInt32(arrText[i]);
+                    Ret[i] = Convert.ToInt32(words[i]);
                 }
                 catch (Exception ex)
                 {
@@ -77,7 +78,7 @@ namespace FirstVar
             {
                 using (StreamWriter sw = new StreamWriter(FileName, false, System.Text.Encoding.Default))
                 {
-                    sw.WriteLine(text);
+                    sw.Write(text);
                 }
             }
             catch (Exception ex)
