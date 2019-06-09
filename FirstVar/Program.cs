@@ -50,6 +50,7 @@ namespace FirstVar
             }
             return Ret;
         }
+
         /// <summary>
         /// Сохранение выходного файла
         /// </summary>
@@ -64,6 +65,7 @@ namespace FirstVar
             }
             SaveTextToFile(FileName, text);
         }
+
         /// <summary>
         /// Сохраняет текст в заданный файл
         /// </summary>
@@ -83,6 +85,7 @@ namespace FirstVar
                 Console.WriteLine("Ошибка записи файла!!! " + ex.Message);
             }
         }
+
         /// <summary>
         /// Возвращает следующее значение последовательности
         /// </summary>
@@ -105,6 +108,7 @@ namespace FirstVar
             }
             return Element;
         }
+
         /// <summary>
         /// Определяем дошли ли мы до конечного значения (все 9 в массиве)
         /// </summary>
@@ -119,6 +123,7 @@ namespace FirstVar
             }
             return false;
         }
+
         /// <summary>
         /// Вычисляем значение хэш функции
         /// </summary>
